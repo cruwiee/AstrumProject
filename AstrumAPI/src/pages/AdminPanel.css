@@ -1,0 +1,130 @@
+.admin-panel {
+  padding: 130px 170px;
+  background: linear-gradient(to bottom, #1E224E 15%, #000000 50%, #000000 100%);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-family: 'Montserrat', sans-serif;
+}
+
+.admin-panel h2 {
+  margin-bottom: 10px;
+  margin-left: 0;
+  font-size: 24px;
+  color: #ffffff;
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-between; /* Растягиваем ссылки по ширине */
+  margin: 20px 0;
+  width: 100%;
+}
+
+.tabs a {
+  padding: 10px 0; /* Отступы только сверху и снизу */
+  text-decoration: none; /* Убираем подчеркивание */
+  font-size: 16px;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center; /* Центрируем текст внутри каждой ссылки */
+  flex-grow: 0; /* Растягиваем ссылки равномерно */
+  text-transform: uppercase; /* Текст в верхнем регистре */
+  transition: color 0.3s ease; /* Плавный переход цвета */
+}
+
+.tabs a.active {
+  color: #958ddf; /* Цвет активной вкладки */
+  border-bottom: 3px solid #958ddf; /* Нижняя полоса для активной вкладки */
+}
+
+.tabs a:hover {
+  color: #6A5EBE; /* Цвет при наведении */
+}
+
+/* Остальные стили остаются без изменений */
+.tab-content {
+  margin-top: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.white-input {
+  background-color: white;
+  color: rgb(240, 240, 240);
+  border: 1px solid #ccc;
+  padding: 8px;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.white-input:focus {
+  outline: none;
+  border-color: #66afe9;
+  box-shadow: 0 0 8px rgba(102, 175, 233, 0.6);
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  color: #5a5a5a;
+  padding: 8px;
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.submit-button {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.submit-button:hover {
+  background-color: #218838;
+}
+
+
+.admin-panel h2 {
+    margin-bottom: 10px; /* Adjusted value */
+    margin-left: 0; /* Alignment */
+    font-size: 24px;
+    color: #ffffff;
+}
+
+.tabs {
+  display: flex; /* Используем Flexbox для расположения кнопок в строку */
+  flex-direction: row; /* Располагаем кнопки в строку */
+  align-items: center; /* Выравнивание по центру по вертикали */
+}
+
+.tabs button {
+  flex: 1; /* Кнопки занимают равное пространство */
+  padding: 10px 0; /* Отступы только сверху и снизу */
+  margin: 0; /* Убираем внешние отступы */
+  border: none; /* Убираем рамку */
+  color: white; /* Цвет текста */
+  cursor: pointer; /* Указатель при наведении */
+  transition: background-color 0.3s; /* Плавный переход цвета фона */
+}
+
+.tabs button.active {
+  background-color: #4A3E8D; /* Цвет фона для активной кнопки */
+}
+
+.tabs button:hover {
+  background-color: #6A5EBE; /* Цвет фона при наведении */
+}

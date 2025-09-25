@@ -1,0 +1,25 @@
+/* Общие стили для Hero */
+.hero {
+    text-align: center;
+    padding: 0;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover; /* Чтобы изображение масштабировалось и не выходило за пределы блока */
+}
+
+/* Медиазапрос для мобильных устройств */
+@media screen and (max-width: 768px) {
+    .hero {
+        padding: 50px 0 0 0; /* Добавляем отступы с боков для мобильных устройств */
+    }
+
+    .hero img {
+        width: 100%;
+        height: auto;
+        object-fit: cover; /* Обрезаем изображение, чтобы оно не деформировалось */
+    }
+}

@@ -1,0 +1,86 @@
+.footer {
+    padding: 20px;
+    width: 100%;
+    height: 500px;
+    background-image: url('../../public/футер.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Центрируем элементы по горизонтали */
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.footer .additional-text {
+    display: inline-block;
+    margin: 5px 18px;
+    font-family: 'Montserrat', sans-serif; /* Исправил шрифт на правильный */
+    color: #fff;
+    font-size: 12px;
+}
+
+/* Социальные иконки */
+.footer-socials a {
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.footer-socials .social-icon {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    margin-bottom: 30px; /* Уменьшаем нижний отступ */
+}
+
+.footer-socials .social-icon:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+.footer-content {
+    padding: 100px 40px;
+    border-radius: 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+   
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Медиазапрос для мобильных устройств */
+@media screen and (max-width: 768px) {
+    .footer {
+        height: auto; /* Автоматическая высота футера для мобильных устройств */
+        padding: 20px 10px; /* Уменьшаем отступы */
+    }
+
+    .footer .additional-text {
+        font-size: 10px; /* Уменьшаем размер шрифта для мобильных */
+        margin: 5px 10px; /* Уменьшаем отступы между элементами */
+    }
+
+    .footer-socials .social-icon {
+        width: 25px; /* Уменьшаем размер иконок */
+        height: 25px;
+    }
+
+    .footer-content {
+        padding: 50px 20px; /* Уменьшаем отступы для мобильных */
+    }
+
+    .footer-links {
+        flex-direction: column; /* Ссылки будут располагаться вертикально */
+        gap: 10px; /* Уменьшаем расстояние между ссылками */
+    }
+
+    .footer h1 {
+        font-size: 1.5rem; /* Уменьшаем размер заголовка для мобильных */
+    }
+}

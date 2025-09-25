@@ -1,0 +1,20 @@
+/* src/components/Search.css */
+.search-container {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .search-container input {
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #5E54B2;
+    border-radius: 4px;
+    color: #000000;
+    background-color: #333;
+  }
+  
+  .search-container input::placeholder {
+    color: #5c5c5c;
+  }
+  

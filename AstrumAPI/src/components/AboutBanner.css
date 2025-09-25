@@ -1,0 +1,85 @@
+.about-banner {
+    position: relative;
+    width: 100%;
+    height: 400px; /* Высота баннера */
+    background-image: url('../../public/баннер_А.png'); 
+    background-size: cover; /* Масштабируем изображение по размеру баннера */
+    background-position: center; /* Центрируем изображение по горизонтали и вертикали */
+    background-repeat: no-repeat; /* Избегаем повторения изображения */
+    display: flex;
+    justify-content: center; /* Центрируем контент по горизонтали */
+    align-items: center; /* Центрируем контент по вертикали */
+    color: #fff; /* Белый текст */
+    font-family: 'Montserrat', sans-serif;
+}
+
+.banner-content {
+    max-width: max-content; /* Ограничиваем ширину контента */
+    padding: 100px 180px; /* Внутренние отступы */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5); /* Тень для текста */
+    text-align: left; /* Выравниваем текст по левому краю */
+}
+
+/* Заголовок */
+.banner-content h1 {
+    font-size: 2.3rem; /* Размер заголовка */
+    margin-bottom: 15px; /* Отступ от текста ниже */
+    font-family: 'Montserrat', sans-serif; /* Шрифт */
+    text-align: left;
+}
+
+/* Параграф */
+.banner-content p {
+    font-size: 1rem; /* Размер текста */
+    margin-bottom: 20px; /* Отступ от кнопки */
+}
+
+/* Кнопка */
+.banner-button {
+    padding: 10px 30px;
+    background-color: #a18ad6; /* Основной цвет кнопки */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Эффект при наведении на кнопку */
+.banner-button:hover {
+    background-color: #8b9bad; /* Изменение цвета при наведении */
+    transform: scale(1.05); /* Увеличение кнопки */
+}
+
+.about-banner {
+    margin-bottom: 150px; /* Пример использования отступа 150px, вы можете изменить значение по вашему усмотрению */
+}
+
+/* Медиазапрос для мобильных устройств */
+@media screen and (max-width: 768px) {
+    .about-banner {
+        height: 300px; /* Уменьшаем высоту баннера на мобильных */
+    }
+
+    .banner-content {
+        padding: 50px 20px; 
+        max-width: 100%;
+        text-align: center; 
+    }
+
+    .banner-content h1 {
+        font-size: 1.8rem; /* Уменьшаем размер заголовка на мобильных */
+        text-align: center;
+    }
+
+    .banner-content p {
+        font-size: 0.9rem; /* Уменьшаем размер текста на мобильных */
+    }
+
+    .banner-button {
+        padding: 8px 20px; /* Уменьшаем размер кнопки */
+        margin-bottom: 40px;
+        font-size: 0.9rem; /* Уменьшаем размер шрифта на кнопке */
+    }
+}

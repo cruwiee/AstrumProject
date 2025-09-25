@@ -1,0 +1,310 @@
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #000000;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.content {
+    padding-top: 100px; /* Примерное значение, замените его на высоту вашего header */
+}
+.header {
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 180px;
+    background-color: #000000;
+    min-height: 80px; /* Примерное значение */
+    z-index: 1000; /* Устанавливаем высокий z-index, чтобы шапка была поверх других элементов */
+    font-family: 'Montserrat', sans-serif;
+}
+
+.header .logo {
+    font-size: 20px;
+}
+
+.header .nav a {
+    margin: 0 10px;
+    color: #fff; /* Цвет ссылок в навигации */
+    font-size: 12px;
+    text-decoration: none; /* Убираем подчеркивание */
+}
+
+.header .register-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.hero {
+    text-align: center;
+    padding: 0;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.header-icons {
+    display: flex;
+    align-items: center;
+}
+
+.cart-icon,
+.profile-icon {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 20px;
+    padding: 5px;
+}
+
+.cart-icon img,
+.profile-icon img {
+    width: 25px;
+    height: 25px;
+}
+
+.basket-icon img {
+    width: 25px; /* Установите желаемую ширину иконки */
+    height: 25px; /* Установите желаемую высоту иконки */
+}
+.gallery {
+    padding: 30px;
+}
+
+.gallery-filter a {
+    color: #fff; /* Устанавливаем белый цвет текста для ссылок в списке категорий */
+    text-decoration: none; /* Убираем подчеркивание у ссылок */
+}
+
+.seperated-list {
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 1.5em;
+}
+
+.seperated-heading a {
+    padding: 0.2em 0.6em;
+}
+
+.seperated-list li + li::before {
+    opacity: 0.75;
+    content: "|";
+    padding: 0px 0.25em;
+}
+
+a {
+    color: white; /* Устанавливаем цвет текста ссылок на белый */
+    text-decoration: none; /* Убираем подчеркивание */
+    transition: color 0.3s; /* Плавный переход цвета */
+}
+
+a:hover {
+    color: lightgray; /* Цвет текста при наведении */
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+li {
+    text-align: -webkit-match-parent;
+}
+
+
+
+
+h1 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.social-icons img {
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+   
+}
+
+.basket-icon {
+    background: none; /* Убираем фон */
+    border: none; /* Убираем границу */
+    cursor: pointer; /* Устанавливаем указатель мыши при наведении */
+    padding: 5px; /* Добавляем немного отступа, если нужно */
+}
+
+.nav button {
+    color: white; /* Устанавливаем цвет текста кнопок в белый */
+    background-color: #000000;
+    border: none;/* Дополнительные стили для кнопок в навигационной панели */
+    font-family: 'Montserrat', sans-serif;
+}
+.basket-icon-container {
+    position: relative;
+    display: inline-block;
+}
+
+.basket-icon-count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: #5E54B2;
+    color: white;
+    font-size: 12px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+/* Навигация */
+.nav {
+    display: flex; /* Выстраиваем элементы в строку */
+    align-items: center; /* Выравниваем элементы по вертикали */
+    gap: 20px; /* Расстояние между элементами */
+}
+
+/* Контейнер для кнопки поиска и поля */
+.search-container {
+    display: flex; /* Выстраиваем кнопку и поле в строку */
+    align-items: center; /* Выравниваем по центру */
+    gap: 10px; /* Расстояние между кнопкой и полем */
+}
+
+/* Кнопка поиска */
+.search-button {
+    background: none;
+   
+    padding: 5px 10px;
+    
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 13px;
+}
+
+/* Поле поиска */
+.search-input {
+    padding: 5px;
+    font-size: 14px;
+    border: 1px solid #fff;
+    background-color: #000;
+    color: #fff;
+    border-radius: 5px;
+    width: 200px; /* Фиксированная ширина */
+    transition: opacity 0.3s ease, visibility 0.3s ease; /* Плавный переход */
+    opacity: 0; /* По умолчанию скрыто */
+    visibility: hidden; /* Элемент невидим */
+}
+
+/* Показываем поле, когда isSearchVisible=true */
+.search-container .search-input.visible {
+    opacity: 1; /* Делаем видимым */
+    visibility: visible; /* Делаем видимым */
+}
+/* Адаптивность */
+@media (max-width: 768px) {
+    .nav {
+        flex-wrap: wrap; /* Разрешаем перенос элементов на новую строку, если не помещаются */
+        gap: 10px; /* Уменьшаем расстояние между элементами */
+    }
+
+    .search-input {
+        width: 150px; /* Уменьшаем ширину поля поиска на мобильных устройствах */
+    }
+
+
+
+    .header {
+        padding: 15px 20px; /* Уменьшаем отступы для мобильных устройств */
+        flex-direction: row; /* Элементы шапки располагаются в одну строку */
+        justify-content: space-between; /* Располагаем элементы по краям */
+        align-items: center; /* Выравниваем элементы по центру по вертикали */
+    }
+    .nav button {
+        color: white; /* Устанавливаем цвет текста кнопок в белый */
+        background-color: #000000;
+        border: none;/* Дополнительные стили для кнопок в навигационной панели */
+        font-size: 10px;
+    }
+
+    .header .logo {
+        font-size: 14px; /* Уменьшаем размер шрифта для логотипа */
+    }
+
+    .header .nav {
+        display: flex; /* Делаем контейнер для навигации флекс-контейнером */
+        justify-content: center; /* Выравниваем ссылки по центру */
+        flex-grow: 1; /* Навигация будет занимать доступное пространство */
+    }
+
+    .header .nav a {
+        font-size: 5px; /* Увеличиваем размер шрифта ссылок для лучшей читаемости */
+        margin: 0 1px; /* Расстояние между ссылками */
+    }
+
+    .header .register-btn {
+        font-size: 12px; /* Уменьшаем размер текста на кнопке */
+        padding: 8px 16px; /* Уменьшаем отступы на кнопке */
+    }
+
+    .header-icons {
+        display: flex; /* Используем флекс-контейнер для иконок */
+        justify-content: flex-end; /* Выравниваем иконки по правому краю */
+        align-items: center; /* Выравниваем иконки по вертикали */
+    }
+
+    .cart-icon, .profile-icon {
+        margin-left: 5px; /* Расстояние между иконками */
+    }
+
+    .hero img {
+        width: 100%; /* Изображение по ширине экрана */
+        height: auto;
+    }
+
+    .gallery {
+        padding: 15px; /* Уменьшаем отступы для галереи */
+    }
+
+    .seperated-list {
+        flex-direction: row; /* Располагаем элементы списка вертикально */
+        margin: 10px 0; /* Уменьшаем отступы между элементами списка */
+    }
+
+    .seperated-heading a {
+        font-size: 12px; /* Уменьшаем размер текста */
+        padding: 0.2em 0.4em; /* Уменьшаем отступы */
+    }
+
+    .basket-icon {
+        padding: 2px; /* Уменьшаем отступы иконки корзины */
+    }
+
+    .social-icons img {
+        width: 20px; /* Уменьшаем размер иконок соцсетей */
+        height: 20px;
+    }
+   
+    .profile-icon img {
+        width: 20px;
+        height: 20px;
+    }
+    .cart-icon img{
+        width: 25px;
+        height: 25px;
+    }
+    
+}

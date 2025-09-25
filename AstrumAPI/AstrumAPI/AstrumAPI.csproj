@@ -1,0 +1,46 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BCrypt.Net" Version="0.1.0" />
+    <PackageReference Include="ClosedXML" Version="0.104.2" />
+    <PackageReference Include="EPPlus" Version="7.7.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.13" />
+    <PackageReference Include="Microsoft.AspNetCore.Cors" Version="2.3.0" />
+    <PackageReference Include="Microsoft.AspNetCore.SignalR" Version="1.2.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="SendGrid" Version="9.29.3" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="7.3.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="public\" />
+    <Folder Include="wwwroot\uploads\" />
+    <Folder Include="wwwroot\images\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\uploads\arisaprint.jpg" />
+    <None Include="wwwroot\uploads\keidprint.png" />
+    <None Include="wwwroot\uploads\light.jpg" />
+    <None Include="wwwroot\uploads\makotoprint.png" />
+    <None Include="wwwroot\uploads\Без названия132_20250224171025.png" />
+    <None Include="wwwroot\uploads\Без названия132_20250224171026.png" />
+    <None Include="wwwroot\uploads\Без названия132_20250224171207.png" />
+    <None Include="wwwroot\uploads\Без названия133_20250224171951.png" />
+    <None Include="wwwroot\uploads\карточка 1.png" />
+    <None Include="wwwroot\uploads\карточка 2.png" />
+    <None Include="wwwroot\uploads\карточка 3.png" />
+    <None Include="wwwroot\uploads\карточка 4.png" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,21 @@
+<<<<<<< HEAD
+# React.js
+node_modules/
+build/
+dist/
+.env
+*.log
+=======
+ 
+.vs/ 
+bin/ 
+obj/ 
+*.suo 
+*.user 
+
+# ASP.NET Core
+bin/
+obj/
+*.log
+appsettings.*.json
+>>>>>>> c2966c03 (Initial commit)

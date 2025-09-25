@@ -1,0 +1,304 @@
+.profile-container {
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 20px;
+  background: none;
+  border-radius: 10px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 15px;
+  position: relative; /* Добавляем позиционирование для абсолютного размещения кнопки */
+  min-height: 100px; /* Устанавливаем минимальную высоту, чтобы кнопка не перекрывала контент */
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.logout {
+  position: absolute; /* Абсолютное позиционирование относительно .profile-header */
+  bottom: 10px; /* Отступ от нижнего края */
+  right: 10px; /* Отступ от правого края */
+  background: none;
+  color: rgb(255, 0, 0);
+  padding: 8px 15px;
+  /* border: 1px solid rgb(255, 0, 0); Добавляем границу, как указано в исходных стилях */
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.logout:hover {
+  background-color: #333; /* Темный фон при наведении для контраста */
+}
+
+/* Остальные стили остаются без изменений */
+.tabs {
+  display: flex;
+  justify-content: space-between; /* Растягиваем ссылки так, чтобы они занимали всю ширину равномерно */
+  margin: 20px 0;
+  width: 100%; /* Убедимся, что контейнер занимает всю ширину */
+}
+
+.tabs a {
+  padding: 10px 0; /* Убираем горизонтальные padding, чтобы текст выравнивался по краям */
+  text-decoration: none; /* Убираем подчеркивание ссылок */
+  font-size: 16px;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center; /* Центрируем текст внутри каждой ссылки */
+  flex-grow: 0; /* Позволяем ссылкам растягиваться равномерно */
+  text-transform: uppercase; /* Делаем текст заглавными буквами */
+}
+
+.tabs a.active {
+  border-bottom: 3px solid #958ddf;
+  color: #958ddf;
+}
+
+/* Стили для вкладки "Админ" (если нужно сохранить отличие) */
+.tab-link {
+  padding: 10px 0;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.tab-link.active {
+  border-bottom: 3px solid #958ddf;
+  color: #958ddf;
+}
+
+.tab-content {
+  margin-top: 20px;
+}
+
+.tab-content h3 {
+  margin-bottom: 10px;
+}
+
+.tab-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.tab-content li {
+  padding: 8px 8px; /* Исправлен синтаксис: 8px 8px */
+  border: 1px solid #eee;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.buttons a {
+  text-decoration: none;
+  background: none;
+  color: white;
+}
+
+  /* Общий контейнер заказов */
+/* Контейнер вкладки "Заказы" */
+.orders-container {
+  padding: 20px 0;
+}
+
+.orders-container h3 {
+  font-size: 24px;
+  color: #ffffff;
+  margin-bottom: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+
+/* Контейнер списка заказов */
+.order-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Карточка заказа */
+.order-card {
+  background: #1a1a1a; /* Темный фон для контраста */
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease-in-out;
+}
+
+.order-card:hover {
+  transform: translateY(-3px); /* Легкий подъем при наведении */
+}
+
+/* Заголовок заказа */
+.order-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #333;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.order-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.order-number {
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.order-date,
+.order-status,
+.order-total {
+  font-size: 14px;
+  color: #cdcdcd;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Кнопка удаления */
+.delete-order-btn {
+  background: #d9363e; /* Красный фон */
+  color: #ffffff;
+  border: none;
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+}
+
+.delete-order-btn:hover {
+  background: #b02a30; /* Темнее при наведении */
+}
+
+/* Список товаров в заказе */
+.order-items {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Элемент товара */
+.order-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 5px 0;
+}
+
+.order-item-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  object-fit: cover;
+  border: 1px solid #444;
+}
+
+.order-item-details {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.order-item-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.order-item-quantity {
+  font-size: 12px;
+  color: #cdcdcd;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Сообщения об отсутствии данных */
+.no-items,
+.no-orders {
+  font-size: 14px;
+  color: #cdcdcd;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  margin: 20px 0;
+}
+/* Контейнер вкладки "Корзина" */
+.cart-tab {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Выравнивание по центру по горизонтали */
+  gap: 20px; /* Расстояние между CartItems и кнопкой */
+  width: 100%; /* Устанавливаем ширину контейнера на 100% */
+  max-width: 1200px; /* Ограничиваем максимальную ширину, если нужно */
+  margin: 0 auto; /* Центрируем контейнер, если он уже не внутри другого центрированного блока */
+}
+
+/* Стили для кнопки "Оформить заказ" */
+.checkout-button {
+  display: block; /* Делаем кнопку блочным элементом для растяжки по ширине */
+  width: 100%; /* Растягиваем кнопку на всю ширину контейнера */
+  padding: 15px 20px; /* Увеличиваем внутренние отступы для более крупного вида */
+  background-color: #5E54B2; /* Фиолетовый цвет */
+  color: white; /* Белый текст */
+  text-decoration: none; /* Убираем подчеркивание ссылки */
+  border-radius: 5px; /* Скругленные углы */
+  font-size: 18px; /* Размер текста */
+  text-align: center; /* Текст по центру */
+  transition: background-color 0.3s ease; /* Плавный переход при наведении */
+}
+
+.checkout-button:hover {
+  background-color: #4b077c; /* Темнее фиолетовый при наведении */
+}
+
+.favorite-btn {
+  position: absolute;
+  top: 9px;
+  right: 3px;
+  z-index: 2;
+  width: 24px;
+  height: 24px;
+  background-image: url('../../public/heart-outline.svg'); /* Иконка по умолчанию */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: transform 0.1s ease;
+}
+
+.favorite-btn.favorited {
+  background-image: url('../../public/heart-filled.svg'); /* Иконка для избранного */
+}
+
+.favorite-btn:hover {
+  transform: scale(1.1);
+}

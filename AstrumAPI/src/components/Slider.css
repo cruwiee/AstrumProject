@@ -1,0 +1,427 @@
+.product-slider-button {
+    background-color: transparent; /* Прозрачный фон */
+    color: white; /* Белый цвет текста (стрелок) */
+    border: none; /* Убираем границы */
+    font-size: 2rem; /* Увеличиваем размер стрелок */
+    cursor: pointer; /* Указатель при наведении */
+    padding: 0 10px; /* Отступы по горизонтали */
+    position: absolute; /* Для размещения кнопок */
+    top: 50%; /* Расположить по центру по вертикали */
+    transform: translateY(-50%); /* Центрируем относительно оси Y */
+    z-index: 10; /* Поверх карточек */
+}
+.product-slider-button:hover {
+    color: #a18ad6; /* Изменение цвета стрелок при наведении */
+    transform: translateY(-50%) scale(1.2); /* Увеличиваем кнопку */
+    transition: transform 0.3s ease; /* Плавная анимация */
+}
+
+/* Левая кнопка */
+.product-slider-button:first-child {
+    left: 60px; /* Располагаем кнопку слева */
+}
+.product-slider-cards .product-slider-card:first-child {
+    margin-left: 620px; /* Увеличьте значение для большего отступа */
+}
+
+
+
+
+/* Правая кнопка */
+.product-slider-button:last-child {
+    right: 60px; /* Располагаем кнопку справа */
+}
+.product-slider h2 {
+    padding-left: 160px; /* Увеличьте значение для большего отступа */
+}
+
+.product-slider {
+    position: static;
+    margin: 20px 0;
+    text-align: left;
+    z-index: 0; /* Убираем высокое перекрытие */
+  }
+
+  .product-details {
+    z-index: 0; /* Это важно для видимости товара */
+    min-height: 400px; /* или любая другая подходящая высота */
+  }
+.product-slider-cards {
+    display: flex; /* Используем flexbox для горизонтального расположения карточек */
+    overflow-x: auto; /* Позволяем прокручивать карточки по горизонтали */
+    padding: 10px 0; /* Отступы сверху и снизу */
+}
+.product-slider.show {
+    display: block; /* Показывать слайдер, когда добавлен класс "show" */
+  }
+
+.product-slider-card {
+    min-width: 290px; /* Минимальная ширина карточки */
+    margin: 0 5px; /* Отступы между карточками */
+    background-color: #000; /* Цвет фона карточки */
+    border-radius: 5px; /* Закругленные углы */
+    overflow: hidden; /* Скрываем переполнение */
+    position: relative; /* Для позиционирования элементов внутри карточки */
+}
+
+.product-slider-card-image img {
+    width: 100%; /* Ширина изображения 100% */
+    height: auto; /* Автоматическая высота */
+}
+
+.product-slider-card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s;
+}
+
+.product-slider-card-image:hover .product-slider-card-overlay {
+    opacity: 1;
+}
+
+.product-slider-cards {
+   
+    gap: 80px 10px;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 10px auto; /* auto для вертикального и горизонтального центрирования */
+}
+
+.product-slider-card {
+    position: relative;
+    width: 300px;
+    height: 345px;
+    padding: 6px;
+    text-align: left;
+    background-color: #000000;
+    font-size: 12px;
+    overflow: hidden;
+}
+
+.product-slider-card img {
+    width: 100%;
+    height: 270px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.product-slider-card-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.product-slider-card-image img {
+    width: 100%;
+    height: 270px;
+    object-fit: cover;
+    transition: transform 0.4s ease-in-out;
+}
+
+/* Эффект увеличения картинки */
+.product-slider-card-image:hover img {
+    transform: scale(1.05);
+}
+
+/* Overlay */
+.product-slider-card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Появление overlay при наведении */
+.product-slider-card-image:hover .card-overlay {
+    opacity: 1;
+}
+
+.product-slider-card-overlay h3,
+.product-slider-card-overlay small {
+    font-size: 1.2em;
+    margin: 5px 0;
+    color: #fff;
+    opacity: 0; /* Начальная прозрачность */
+    transform: translateY(10px); /* Начальный сдвиг */
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+
+.product-slider-card-image:hover .product-slider-card-overlay h3,
+.product-slider-card-image:hover .product-slider-card-overlay small {
+    opacity: 1; /* Полная видимость */
+    transform: translateY(0); /* Возвращается на место */
+}
+
+.product-slider-card-overlay small {
+    font-size: 0.9em;
+}
+
+.product-slider-card:hover {
+    background-color: #000000;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.product-slider-card strong {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.product-slider-card small {
+    font-size: 10px;
+}
+
+.product-slider-cart-button {
+    position: absolute;
+    bottom: 10px; /* Опускаем иконку ниже карточки */
+    right: 10px; /* Отступ от правого края карточки */
+    width: 40px; /* Ширина кнопки */
+    height: 40px; /* Высота кнопки */
+    background-image: url('../../public/Корзина.svg');/* Укажите путь к вашей иконке */
+    background-size: contain; /* Иконка полностью помещается в кнопку */
+    border: none; /* Убираем границу кнопки */
+    cursor: pointer; /* Добавляем указатель мыши */
+}
+
+.product-slider-cart-button:hover {
+    transform: scale(1.1); /* Увеличиваем кнопку при наведении */
+    transition: transform 0.2s ease; /* Анимация */
+}
+.product-slider-container {
+    position: relative; /* Устанавливаем контейнер как точку отсчета */
+    display: flex;
+    align-items: center;
+    overflow: hidden; /* Скрываем содержимое за пределами слайдера */
+}
+
+.slider-button {
+    /* background-color: #a18ad6; Цвет кнопок */
+    color: white; /* Цвет текста кнопок */
+    border: none; /* Убираем границу */
+    padding: 10px 15px; /* Отступы */
+    border-radius: 5px; /* Закругленные углы */
+    cursor: pointer; /* Указатель мыши */
+    margin: 0 10px; /* Отступы между кнопками и слайдером */
+}
+
+/* .product-slider-button:hover {
+    /* background-color: #8b9bad; Цвет кнопки при наведении 
+} */
+
+
+.product-slider-cards {
+    display: flex;
+    overflow-x: auto; /* Позволяем горизонтальную прокрутку */
+    gap: 5px; /* Отступы между карточками */
+    padding: 10px; /* Внутренние отступы */
+    scroll-behavior: smooth; /* Плавная прокрутка */
+}
+.product-slider-cards::-webkit-scrollbar {
+    display: none; /* Для Chrome, Safari и Opera */
+}
+
+.product-slider-card {
+    position: relative;
+    width: 290px;
+    height: 345px;
+    padding: 5px;
+    text-align: left;
+    background-color: #000000;
+    font-size: 12px;
+    overflow: hidden;
+    scroll-snap-align: start;
+}
+
+.product-slider-card img {
+    width: 100%;
+    height: 270px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.product-slider-card-image {
+    position: static;
+    overflow: hidden;
+}
+
+.product-slider-card-image img {
+    width: 100%;
+    height: 270px;
+    object-fit: cover;
+    transition: transform 0.4s ease-in-out;
+}
+
+/* Эффект увеличения картинки */
+.product-slider-card-image:hover img {
+    transform: scale(1.05);
+}
+
+/* Overlay */
+.product-slider-card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Появление overlay при наведении */
+.product-slider-card-image:hover .card-overlay {
+    opacity: 1;
+}
+
+/* Текст внутри overlay */
+.product-slider-card-overlay h3,
+.product-slider-card-overlay small {
+    font-size: 1.2em;
+    margin: 5px 0;
+    color: #fff;
+    opacity: 0; /* Начальная прозрачность */
+    transform: translateY(10px); /* Начальный сдвиг */
+    transition: opacity 0.4s ease, transform 0.4s ease; /* Плавность текста */
+}
+
+/* Плавное появление текста */
+.product-slider-card-image:hover .card-overlay h3,
+.product-slider-card-image:hover .card-overlay small {
+    opacity: 1; /* Полностью видно */
+    transform: translateY(0); /* Возвращается на место */
+}
+
+.product-slider-card-overlay small {
+    font-size: 0.9em;
+}
+
+.product-slider-card:hover {
+    background-color: #000000;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.product-slider-card strong {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.product-slider-card small {
+    font-size: 10px;
+}
+
+.product-slider-cart-button {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    background-image: url('../../public/Корзина.svg'); /* Относительный путь к изображению Корзина.svg */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border: none;
+    cursor: pointer;
+    color: white; /* Устанавливаем цвет текста кнопок в белый */
+    background-color: #000000;
+    border: none;/* Дополнительные стили для кнопок в навигационной панели */
+}
+
+.product-slider-cart-button:hover {
+    transform: scale(1.1); /* Увеличиваем кнопку при наведении */
+    transition: transform 0.2s ease; /* Анимация */
+}
+
+
+.favorite-btn {
+    position: absolute;
+    top: 9px;
+    right: 3px;
+    z-index: 2;
+    width: 24px;
+    height: 24px;
+    background-image: url('../../public/heart-outline.svg'); /* Иконка по умолчанию */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: transform 0.1s ease;
+  }
+  
+  .favorite-btn.favorited {
+    background-image: url('../../public/heart-filled.svg'); /* Иконка для избранного */
+  }
+  
+  .favorite-btn:hover {
+    transform: scale(1.1);
+  }
+  
+
+@media (max-width: 768px) {
+    .product-slider-cards {
+        gap: 10px;
+        justify-content: flex-start;
+    }
+
+    .product-slider-card {
+        min-width: 190px;
+        max-width: 250px; /* Сделаем карточки немного меньше */
+        height: auto; /* Высота карточек будет автоматически подстраиваться */
+        padding: 10px;
+    }
+
+
+    .product-slider h2 {
+        padding-left: 20px; /* Уменьшаем отступы от левого края */
+    }
+
+    .product-slider-card img {
+        height: 200px; /* Уменьшаем высоту изображений на мобильных устройствах */
+    }
+
+    .product-slider-cart-button {
+        width: 35px;
+        height: 35px;
+    }
+    .product-slider-button {
+        display: none; /* Скрываем кнопки на мобильных устройствах */
+    }
+    .product-slider-cards {
+        display: flex;
+        gap: 5px; /* Уменьшаем отступы между карточками */
+        padding: 10px; /* Добавляем отступы */
+        scroll-behavior: smooth; /* Плавная прокрутка */
+        justify-content: flex-start; /* Располагаем карточки от левого края */
+    }
+
+    .product-slider-card {
+        min-width: 180px;
+        max-width: 250px; /* Уменьшаем размер карточек */
+    }
+    .product-slider-cards .product-slider-card:first-child {
+        margin-left: 0; /* Убираем лишний маргин */
+    }
+  
+
+  
+}
+

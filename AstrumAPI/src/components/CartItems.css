@@ -1,0 +1,267 @@
+.body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #000000; /* Черный цвет фона (fallback) */
+    color: #fff; /* Белый цвет текста */
+    background-image: linear-gradient(to bottom, #1E224E 15%, #000000 50%, #000000 100%);
+}
+
+.cart-items {
+    width: 100%; /* Устанавливаем ширину на 100% */
+    max-width: 1400px; /* Устанавливаем максимальную ширину на 1500px или больше */
+    margin: 0 auto; /* Центрируем контейнер */
+    padding: 20px;
+}
+.cart-item-header {
+    display: grid;
+    grid-template-columns: 80px 1fr 180px 110px 50px; /* Сетка для изображения, названия и т. д. */
+    align-items: center;
+    gap: 23px;
+    padding: 12px 36px;
+    text-transform: uppercase;
+    color: #ffffff;
+    background-color: none;
+    border-bottom: 2px solid #ffffff;
+}
+
+.cart-item-header span {
+    text-align: left; /* Обычное выравнивание для всех элементов */
+}
+
+.cart-item-header span {
+    margin-right: 10px; /* Отступ справа */
+}
+
+
+.cart-item-header span:nth-child(2) {
+    text-align: left; /* Название товара сдвигаем по левому краю */
+    padding-left: 60px; /* Добавляем отступ для названия */
+}
+
+.cart-items-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%; /* Расширяем на всю доступную ширину */
+    max-width: 1280px; /* Устанавливаем максимальную ширину */
+    margin: 0 auto; /* Центрируем контейнер */
+    padding: 20px;
+}
+
+/* Стили для элементов в корзине (дивы вместо таблицы) */
+.cart-items .cart-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+.cart-items .cart-item:last-child {
+    border-bottom: 1px solid #ddd;
+}
+
+.cart-items .cart-item-header {
+   
+    color: #fff;
+    text-transform: uppercase;
+}
+.cart-items .cart-item-details {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding-left: 10px; /* Добавляем отступ слева */
+}
+
+.cart-items .product-name {
+    font-size: 16px;
+    padding-left: 50px; /* Если хотите добавить отступ только для названия товара */
+}
+
+.cart-items .product-image {
+    width: 60px;
+    height: auto;
+    border-radius: 4px;
+}
+
+/* .cart-items .product-name {
+    font-size: 16px;
+} */
+
+.cart-items .product-quantity {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cart-items .quantity-button {
+    font-size: 14px;
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cart-items .quantity-button:hover {
+    background-color: #6f4afe;
+}
+
+/* Стиль для кнопки удаления товара */
+.delete-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.delete-btn .material-icons {
+    font-size: 20px;
+    color: #fff;
+}
+.cart-items .cart-item {
+    display: grid;
+    grid-template-columns: 80px 1fr 180px 110px 50px; /* Определяем сетку: изображение, название, кол-во, цена, удаление */
+    align-items: center; /* Центрируем элементы по вертикали */
+    gap: 20px; /* Отступы между элементами */
+    padding: 20px;
+    border-bottom: 1px solid #ffffff;
+    
+}
+
+.cart-items .cart-item-details {
+    font-size: 16px;
+    color: #fff;
+    text-align: left; /* Выравниваем текст слева */
+    overflow: hidden; /* Прячем длинный текст */
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.cart-items .cart-item-quantity button {
+    width: 30px;
+    height: 30px;
+    margin: 7px;
+    background-color: transparent; /* Убираем фон */
+    border: 2px solid #fff; /* Белая обводка */
+    border-radius: 50%; /* Закругляем кнопки */
+    font-size: 16px;
+    color: #fff; /* Белый цвет текста */
+    cursor: pointer; /* Указатель при наведении */
+    transition: all 0.3s ease; /* Анимация на hover */
+   
+    align-items: center;
+    justify-content: center; /* Центрируем содержимое кнопки */
+}
+
+.cart-items .cart-item-quantity button:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Легкий белый фон при наведении */
+    color: #fff;
+}
+
+
+.cart-items .cart-item-price {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: left; /* Цена выравнивается по правому краю */
+}
+
+.cart-items .cart-item-remove {
+    text-align: center;
+}
+
+.cart-item-image .product-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 1px;
+    object-fit: cover;
+    
+}
+@media (max-width: 767px) {
+    /* Общий стиль для body */
+    .body {
+        padding: 10px;
+        font-size: 14px; /* Уменьшаем общий размер текста */
+    }
+
+    /* Контейнер с товарами в корзине */
+    .cart-items-container {
+        gap: 15px; /* Уменьшаем отступы между элементами */
+        padding: 8px; /* Уменьшаем внутренние отступы */
+  
+    }
+
+    .cart-items {
+        padding: 10px; /* Уменьшаем внутренние отступы */
+    }
+
+    /* Заголовок корзины */
+    .cart-item-header {
+        display: none; /* Убираем заголовки для экономии места */
+    }
+
+    /* Стили для товаров в корзине */
+    .cart-items .cart-item {
+        display: flex; /* Располагаем элементы в строку */
+        flex-wrap: wrap; /* Позволяет элементам переноситься на новую строку, если нужно */
+        align-items: center; /* Выравнивание элементов по вертикали */
+        justify-content: space-between; /* Равномерное распределение элементов */
+        padding: 10px;
+        gap: 8px; /* Уменьшаем отступы между элементами */
+        border-bottom: 1px solid #ffffff; /* Разделительная линия между товарами */
+    }
+
+    .cart-items .cart-item-image {
+        text-align: left; /* Центрируем изображение */
+        flex: 0 0 auto; /* Фиксируем размер изображения */
+    }
+
+    .cart-items .product-image {
+        width: 110px; /* Увеличиваем размер изображения */
+        height: 110px;
+        object-fit: cover; /* Изображение заполняет блок без искажений */
+    }
+
+    .cart-items .cart-item-details {
+        text-align: left; /* Центрируем название */
+        font-size: 14px; /* Уменьшаем размер текста */
+        flex: 0 0 auto; /* Даем элементу гибкость по ширине */
+        line-height: 30px; /* Добавляем line-height для выравнивания по вертикали */
+    }
+
+    .cart-items .cart-item-quantity {
+        display: flex;
+        justify-content: center; /* Центрируем элементы управления количеством */
+        align-items: center; /* Центрируем кнопки по вертикали */
+        gap: 8px; /* Уменьшаем расстояние между кнопками */
+        flex: 0 0 auto; /* Даем гибкость для блока количества */
+    }
+
+    .cart-items .quantity-button {
+        width: 20px; /* Уменьшаем размер кнопок */
+        height: 20px;
+        font-size: 14px;
+        display: flex; /* Обеспечиваем выравнивание текста внутри кнопки */
+        align-items: center; /* Центрируем текст в кнопке */
+        justify-content: center; /* Центрируем текст в кнопке */
+        padding: 0; /* Убираем лишние отступы */
+    }
+
+    .cart-items .cart-item-price {
+        text-align: center; /* Центрируем цену */
+        font-size: 14px; /* Уменьшаем размер текста */
+        flex: 1 1 auto; /* Фиксируем позицию для цены */
+        line-height: 30px; /* Добавляем line-height для выравнивания по вертикали */
+    }
+
+    .cart-items .cart-item-remove {
+        text-align: right; /* Центрируем кнопку удаления */
+        flex: 0 0 auto; /* Фиксируем размер для кнопки удаления */
+    }
+
+    .delete-btn .material-icons {
+        font-size: 18px; /* Уменьшаем размер иконки удаления */
+    }
+}
+
+
