@@ -1,0 +1,446 @@
+.order-detail-page {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #000000;
+  color: #fff;
+  background-image: linear-gradient(to bottom, #1E224E 15%, #000000 50%, #000000 100%);
+}
+
+.order-detail-container {
+  flex: 1;
+  max-width: 1200px;
+  margin: 90px auto;
+  padding: 20px;
+  width: 100%;
+}
+
+.order-detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.breadcrumb-detail {
+  font-size: 14px;
+  color: #cdcdcd;
+}
+
+.breadcrumb-detail-link {
+  cursor: pointer;
+  color: #958ddf;
+  transition: color 0.3s ease;
+}
+
+.breadcrumb-detail-link:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.breadcrumb-detail span {
+  margin: 0 5px;
+}
+
+.back-detail-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(45deg, #5E54B2, #958ddf);
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.back-detail-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(94, 84, 178, 0.3);
+}
+
+.order-detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.order-detail-card,
+.order-items-detail-card {
+  background: none;
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.order-detail-card:hover,
+.order-items-detail-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.order-detail-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.order-detail-card-header h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+}
+
+.order-detail-card h3,
+.order-items-detail-card h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 15px;
+}
+
+.order-detail-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.summary-detail-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  color: #cdcdcd;
+}
+
+.summary-detail-item svg {
+  color: #958ddf;
+  font-size: 18px;
+}
+
+.summary-detail-item strong {
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.order-detail-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: capitalize;
+  transition: background-color 0.3s ease;
+}
+
+.status-detail-new {
+  background: linear-gradient(45deg, #958ddf, #5E54B2);
+}
+
+.status-detail-processing {
+  background: linear-gradient(45deg, #4b077c, #958ddf);
+}
+
+.status-detail-canceled {
+  background: linear-gradient(45deg, #d9363e, #ff6666);
+}
+
+.status-detail-default {
+  background: #3a3a3a;
+}
+
+.order-detail-items {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.order-detail-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: none;
+  border-radius: 8px;
+  padding: 8px;
+  transition: background 0.3s ease;
+}
+
+.order-detail-item:hover {
+  background: #302b5f;
+}
+
+.order-detail-item-image {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid #444;
+}
+
+.order-detail-item-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.order-detail-item-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #958ddf;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.order-detail-item-name:hover {
+  color: #ffffff;
+}
+
+.order-detail-item-quantity,
+.order-detail-item-total {
+  font-size: 14px;
+  color: #cdcdcd;
+}
+
+.cancel-detail-button {
+  background: linear-gradient(45deg, #d9363e, #ff6666);
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 15px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cancel-detail-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(217, 54, 62, 0.3);
+}
+
+.cancel-detail-button:disabled {
+  background: #666;
+  cursor: not-allowed;
+}
+
+.modal-detail-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.cancel-detail-modal {
+  background: rgba(42, 42, 42, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 20px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.cancel-detail-modal h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 15px;
+}
+
+.cancel-detail-modal p {
+  font-size: 15px;
+  color: #cdcdcd;
+  margin: 0 0 10px;
+}
+
+.cancel-detail-reason-input {
+  width: 100%;
+  min-height: 80px;
+  background: none;
+  border: 1px solid #444;
+  border-radius: 6px;
+  padding: 10px;
+  font-size: 14px;
+  color: #ffffff;
+  resize: vertical;
+}
+
+.cancel-detail-reason-input:focus {
+  outline: none;
+  border-color: #958ddf;
+}
+
+.modal-detail-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.modal-detail-cancel-button,
+.modal-detail-confirm-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.modal-detail-cancel-button {
+  background: #666;
+  color: #ffffff;
+}
+
+.modal-detail-cancel-button:hover {
+  background: #777;
+}
+
+.modal-detail-confirm-button {
+  background: linear-gradient(45deg, #d9363e, #ff6666);
+  color: #ffffff;
+}
+
+.modal-detail-confirm-button:hover {
+  background: linear-gradient(45deg, #ff6666, #d9363e);
+}
+
+.modal-detail-confirm-button:disabled {
+  background: #666;
+  cursor: not-allowed;
+}
+
+.spinner-detail {
+  animation: spin-detail 1s linear infinite;
+}
+
+@keyframes spin-detail {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.error-detail-message {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+  padding: 15px;
+  font-size: 16px;
+  background: linear-gradient(45deg, #d9363e, #ff6666);
+  border-radius: 8px;
+  margin: 20px 0;
+  font-weight: 500;
+}
+
+.skeleton-detail-loader {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.skeleton-detail-header {
+  width: 50%;
+  height: 30px;
+  background: #333;
+  border-radius: 6px;
+  animation: pulse-detail 1.5s ease-in-out infinite;
+}
+
+.skeleton-detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.skeleton-detail-card {
+  width: 100%;
+  height: 300px;
+  background: #837070;
+  border-radius: 12px;
+  animation: pulse-detail 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse-detail {
+  0% { opacity: 0.6; }
+  50% { opacity: 1; }
+  100% { opacity: 0.6; }
+}
+
+@media (max-width: 768px) {
+  .order-detail-container {
+    margin: 60px auto;
+    padding: 15px;
+  }
+
+  .order-detail-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .order-detail-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .order-detail-card,
+  .order-items-detail-card {
+    width: 100%;
+  }
+
+  .skeleton-detail-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .order-detail-item {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: center;
+  }
+
+  .order-detail-item-image {
+    width: 100%;
+    max-width: 120px;
+    height: auto;
+  }
+
+  .cancel-detail-modal {
+    width: 95%;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .order-detail-card-header h2 {
+    font-size: 20px;
+  }
+
+  .order-detail-card h3,
+  .order-items-detail-card h3 {
+    font-size: 18px;
+  }
+
+  .back-detail-button,
+  .cancel-detail-button {
+    width: 100%;
+    text-align: center;
+  }
+}

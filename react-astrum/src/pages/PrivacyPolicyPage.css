@@ -1,0 +1,126 @@
+.privacy-policy-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #000000;
+  color: #fff;
+  background-image: linear-gradient(to bottom, #1E224E 15%, #000000 50%, #000000 100%);
+}
+
+.main-content {
+  flex: 1;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: none;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.main-content h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 30px;
+  letter-spacing: 0.5px;
+}
+
+.main-content h2 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 25px 0 15px;
+  border-left: 4px solid #5E54B2;
+  padding-left: 15px;
+}
+
+.main-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  color: #d0d0d0;
+}
+
+.main-content ul {
+  list-style-type: none;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.main-content li {
+  position: relative;
+  font-size: 1.1rem;
+  color: #d0d0d0;
+  margin-bottom: 12px;
+  padding-left: 25px;
+}
+
+.main-content li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #5E54B2;
+  font-size: 1.5rem;
+}
+
+.main-content a {
+  color: #5E54B2;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.main-content a:hover {
+  color: #5E54B2;
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    margin: 40px 20px;
+    padding: 20px;
+    border-radius: 8px;
+  }
+
+  .main-content h1 {
+    font-size: 2rem;
+  }
+
+  .main-content h2 {
+    font-size: 1.5rem;
+    padding-left: 10px;
+    border-left-width: 3px;
+  }
+
+  .main-content p,
+  .main-content li {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-content {
+    margin: 30px 15px;
+    padding: 15px;
+  }
+
+  .main-content h1 {
+    font-size: 1.75rem;
+  }
+
+  .main-content h2 {
+    font-size: 1.25rem;
+  }
+
+  .main-content ul {
+    margin-left: 15px;
+  }
+
+  .main-content li {
+    padding-left: 20px;
+  }
+}

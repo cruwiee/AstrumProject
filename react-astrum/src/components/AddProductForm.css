@@ -1,0 +1,224 @@
+.add-product-form {
+  margin: 0 auto;
+  border-radius: 8px;
+  background-color: none;
+}
+
+.add-product-form div {
+  margin-bottom: 15px;
+}
+
+.add-product-form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.add-product-form input[type="text"],
+.add-product-form input[type="number"],
+.add-product-form textarea,
+.add-product-form input[type="file"],
+.add-product-form select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.add-product-form textarea {
+  resize: vertical;
+  height: 100px;
+}
+
+.add-product-form .attributes-container {
+  margin-top: 10px;
+}
+
+.add-product-form .attribute-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+.add-product-form .attribute-row input {
+  flex: 1;
+  min-width: 200px; 
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.add-product-form .attribute-row .remove-attribute-btn {
+  padding: 10px 15px;
+  background-color: #ff4d4f;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.add-product-form .attribute-row .remove-attribute-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.add-product-form .attribute-row .remove-attribute-btn:hover:not(:disabled) {
+  background-color: #d9363e;
+}
+
+.add-product-form .add-attribute-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #5e54b2;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.add-product-form .add-attribute-btn:hover {
+  background-color: #8279d1;
+}
+
+.add-product-form .submit-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #5e54b2;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.add-product-form .submit-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.add-product-form .submit-btn:hover:not(:disabled) {
+  background-color: #a4a3ae;
+}
+
+@media (max-width: 767px) {
+  .add-product-form {
+    padding: 0px; 
+    margin: 0; 
+    border-radius: 8px;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .add-product-form div {
+    margin-bottom: 12px; 
+  }
+
+  .add-product-form label {
+    font-size: 13px; 
+    color: #ffffff; 
+    margin-bottom: 4px;
+  }
+
+  .add-product-form input[type="text"],
+  .add-product-form input[type="number"],
+  .add-product-form textarea,
+  .add-product-form input[type="file"],
+  .add-product-form select {
+    width: 100%;
+    padding: 8px; 
+    border: 1px solid #d1d1d1; 
+    border-radius: 4px;
+    font-size: 14px; 
+    box-sizing: border-box;
+    background: #ffffff; 
+    color: #000000;
+  }
+
+  .add-product-form textarea {
+    height: 80px; 
+  }
+
+  .add-product-form .attributes-container {
+    margin-top: 8px;
+  }
+
+  .add-product-form .attribute-row {
+    flex-direction: column; 
+    gap: 8px; 
+    margin-bottom: 12px;
+    align-items: stretch; 
+  }
+
+  .add-product-form .attribute-row input {
+    min-width: 100%; 
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #d1d1d1;
+    border-radius: 4px;
+  }
+
+  .add-product-form .attribute-row .remove-attribute-btn {
+    padding: 8px 12px; 
+    background-color: #ff4d4f;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    font-size: 13px;
+    cursor: pointer;
+    width: 100%; 
+    text-align: center;
+  }
+
+  .add-product-form .attribute-row .remove-attribute-btn:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+  }
+
+  .add-product-form .attribute-row .remove-attribute-btn:hover:not(:disabled) {
+    background-color: #d9363e;
+  }
+
+  .add-product-form .add-attribute-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #5e54b2;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 8px;
+  }
+
+  .add-product-form .add-attribute-btn:hover {
+    background-color: #4b077c; 
+  }
+
+  .add-product-form .submit-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #5e54b2;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 15px;
+  }
+
+  .add-product-form .submit-btn:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+  }
+
+  .add-product-form .submit-btn:hover:not(:disabled) {
+    background-color: #4b077c;
+  }
+}

@@ -1,0 +1,301 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+.product-reviews {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .reviews-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  .error-message {
+    color: #e53e3e;
+    margin-bottom: 1rem;
+  }
+  
+  .review-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .form-label {
+    font-weight: 500;
+  }
+  
+  .form-textarea {
+    width: 100%;
+    border: 1px solid #e2e8f0;
+    border-radius: 4px;
+    padding: 0.5rem;
+    resize: vertical;
+  }
+  
+  .char-count {
+    font-size: 0.875rem;
+    color: #718096;
+    text-align: right;
+  }
+  
+  .form-actions {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .submit-button-reviwes {
+    background-color: #5E54B2;
+    color: white;
+    font-size: 14px;
+    padding: 1rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .submit-button-reviwes:hover {
+    background-color: #9d96df;
+  }
+  
+  .submit-button:disabled {
+    background-color: #cbd5e0;
+    cursor: not-allowed;
+  }
+  
+  .cancel-button {
+    background-color: #a0aec0;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .cancel-button:hover {
+    background-color: #718096;
+  }
+  .stars-container {
+    display: flex;
+    gap: 10px;
+    cursor: pointer;
+  }
+  
+  .star-icon {
+    fill: #d1d5db;
+    transition: transform 0.4s ease, fill 0.3s ease;
+  }
+  
+  .star-icon .star-shape {
+    transition: fill 0.3s ease, filter 0.3s ease;
+  }
+  
+  .star-icon.selected .star-shape {
+    fill: #a855f7;
+    filter: drop-shadow(0 0 8px #a855f7);
+  }
+  
+  .star-icon {
+    transition: all 0.3s ease;
+    color: #888;
+    filter: drop-shadow(0 0 0 transparent);
+    cursor: pointer;
+  }
+  
+  .star-icon:hover {
+    color: white;
+    filter: drop-shadow(0 0 10px violet);
+    transform: scale(1.1);
+  }
+
+  
+  
+  
+  
+  
+  
+  .loading-message,
+  .no-reviews {
+    color: #718096;
+  }
+  
+  .reviews-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .review-item {
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 1rem;
+  }
+  
+  .review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+  
+  .review-user {
+    font-weight: 500;
+  }
+  
+  .review-comment {
+    color: #4a5568;
+  }
+  
+  .review-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.5rem;
+  }
+  
+  .review-date {
+    font-size: 0.875rem;
+    color: #718096;
+  }
+  
+  .review-actions {
+    display: flex;
+    gap: 0.5rem;
+  }
+  .submit-button{
+    background-color: #5E54B2;
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.875rem;
+  }
+  
+  .edit-button {
+    background-color: #5E54B2;
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.875rem;
+  }
+  
+  .edit-button:hover {
+    background-color: #948cdf;
+  }
+  
+  .delete-button {
+    background-color: #e53e3e;
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.875rem;
+  }
+  
+
+  .review-actions {
+    position: relative;
+    display: inline-block;
+}
+
+.more-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 0 8px;
+    line-height: 1;
+}
+
+.review-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 6px 12px;
+    border-radius: 4px;
+    z-index: 10;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.review-dropdown .delete-button {
+    background: none;
+    border: none;
+    color: red;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 4px 8px;
+}
+
+  .delete-button:hover {
+    color: #000000;
+  }
+
+  
+ .pagination-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  padding: 0;
+}
+
+.pagination__item {
+  cursor: pointer;
+}
+
+.pagination__item.disabled {
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+.pagination__link {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 2px solid #5E54B2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  background-color: none;
+}
+
+.pagination__link:hover {
+  background-color: #8a84c0;
+  border-color: #aaa;
+}
+
+.pagination__link.is_active {
+  background-color: #5E54B2;
+  color: #fff;
+  border-color: #5E54B2;
+}
+

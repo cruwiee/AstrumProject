@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+div.login-page {
+  display: flex;
+  min-height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.welcome-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('D:\Projects\react-astrum\public\oc.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.welcome-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(99, 94, 140, 0.7);
+}
+
+.welcome-section h1 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-align: center;
+  z-index: 1;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.login-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 40px;
+}
+
+.auth-form {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.auth-form h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #000000;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.login-input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #d1d1d1;
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  color: #000000;
+  background-color: #f9f9f9;
+}
+
+.login-input::placeholder {
+  color: #a1a1a1;
+}
+
+.login-input:focus {
+  outline: none;
+  border-color: #5e54b2;
+  box-shadow: 0 0 5px rgba(94, 84, 178, 0.3);
+}
+
+.auth-form .login-button {
+  background-color: #5e54b2;
+  color: #ffffff;
+  padding: 12px;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.auth-form .login-button:hover {
+  background-color: #4b077c;
+}
+
+.auth-form .login-button:disabled {
+  background-color: #a1a1a1;
+  cursor: not-allowed;
+}
+
+.auth-form .error {
+  color: #d9363e;
+  font-size: 14px;
+  text-align: center;
+  margin-top: -10px;
+}
+
+.register-link {
+  font-size: 14px;
+  color: #666666;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.register-link a {
+  color: #5e54b2;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .login-page {
+    flex-direction: column;
+  }
+
+  .welcome-section,
+  .login-container {
+    flex: none;
+    width: 100%;
+    min-height: 50vh;
+  }
+
+  .welcome-section h1 {
+    font-size: 32px;
+  }
+
+  .auth-form {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+}

@@ -1,0 +1,214 @@
+.body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: none; 
+    color: #fff; 
+    background-image: linear-gradient(to bottom, #1E224E 15%, #000000 50%, #000000 100%);
+}
+
+.cart-main {
+    padding-top: 150px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 50px;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+
+.cart-form,
+.cart-items,
+.cart-summary {
+    background-color: none; 
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.cart-form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #4c4c4c; 
+    border-radius: 4px;
+    background-color: #ffffff; 
+    color: #fff;
+    font-size: 14px;
+}
+
+.cart-form input[type="text"]::placeholder {
+    color: #ffffff; 
+}
+
+.cart-form-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width:1250px;
+    color: #ffffff;
+    padding: 20px;
+
+  
+}
+
+@media (min-width: 768px) {
+    .cart-form-container {
+        flex-wrap: nowrap; 
+        justify-content: space-between; 
+    }
+}
+
+.recipient-info,
+.delivery-info {
+    flex: 1; 
+    min-width: 300px; 
+    padding: 20px;
+  
+}
+
+.recipient-info {
+    margin-right: 20px; 
+}
+
+.recipient-info h3,
+.delivery-info h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.recipient-info label,
+.delivery-info label {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #4c4c4c;
+    border-radius: 4px;
+    background-color: #EBEBEB;
+    color: #000000;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+.delivery-info p {
+    font-size: 12px;
+    color: #aaa;
+    margin: 5px 0 15px;
+}
+
+
+.payment-info {
+    margin-top: 20px;
+}
+
+.payment-info h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.payment-info label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.payment-info input[type="radio"] {
+    margin-right: 10px;
+}
+
+@media (max-width: 767px) {
+    body {
+        margin: 0;
+        font-family: 'Montserrat', sans-serif;
+        background-color: #000000;
+        color: #000000;
+        font-size: 14px; 
+    }
+
+    .cart-main {
+        padding-top: 50px; 
+        padding-bottom: 20px; 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+  
+    h1 {
+        font-size: 24px; 
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .cart-form-container {
+        display: flex;
+        flex-direction: column; 
+        gap: 15px;
+        width: 100%; 
+        padding: 10px;
+    }
+
+    .recipient-info,
+    .delivery-info {
+        width: 100%; 
+        padding: 15px;
+        background-color: none;
+        border-radius: 8px;
+        border: 1px solid #4c4c4c;
+    }
+
+    .recipient-info {
+        margin-right: 0; 
+        margin-bottom: 15px; 
+    }
+
+    .recipient-info h3,
+    .delivery-info h3 {
+        font-size: 16px; 
+        margin-bottom: 10px;
+    }
+  
+    .recipient-info label,
+    .delivery-info label {
+        display: block;
+        margin-bottom: 10px;
+        font-size: 12px; 
+    }
+ 
+    input[type="radio"] {
+        margin-right: 10px;
+    }
+   
+    .delivery-info p {
+        font-size: 12px;
+        color: #aaa;
+        margin: 5px 0 15px;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .delivery-info label {
+        font-size: 14px; 
+    }
+
+    .delivery-info p {
+        font-size: 12px; 
+    }
+}

@@ -1,0 +1,28 @@
+.cart-main {
+    background: linear-gradient(to bottom, #1E224E 15%, #000000 50%, #000000 100%);
+    color: #fff;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.cart-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cart-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .cart-content {
+        flex-direction: column;
+        align-items: center;
+    }
+}

@@ -1,0 +1,80 @@
+.about-banner {
+    position: relative;
+    width: 100%;
+    height: 400px; 
+    background-image: url('../../public/баннер_А.png'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    color: #fff; 
+    font-family: 'Montserrat', sans-serif;
+}
+
+.banner-content {
+    max-width: max-content; 
+    padding: 100px 180px; 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5); 
+    text-align: left; 
+}
+
+.banner-content h1 {
+    font-size: 2.3rem; 
+    margin-bottom: 15px; 
+    font-family: 'Montserrat', sans-serif; 
+    text-align: left;
+}
+
+.banner-content p {
+    font-size: 1rem; 
+    margin-bottom: 20px; 
+}
+
+.banner-button {
+    padding: 10px 30px;
+    background-color: #a18ad6; 
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.banner-button:hover {
+    background-color: #8b9bad; 
+    transform: scale(1.05); 
+}
+
+.about-banner {
+    margin-bottom: 150px; 
+}
+
+@media screen and (max-width: 768px) {
+    .about-banner {
+        height: 300px; 
+    }
+
+    .banner-content {
+        padding: 50px 20px; 
+        max-width: 100%;
+        text-align: center; 
+    }
+
+    .banner-content h1 {
+        font-size: 1.8rem; 
+        text-align: center;
+    }
+
+    .banner-content p {
+        font-size: 0.9rem; 
+    }
+
+    .banner-button {
+        padding: 8px 20px; 
+        margin-bottom: 40px;
+        font-size: 0.9rem; 
+    }
+}
